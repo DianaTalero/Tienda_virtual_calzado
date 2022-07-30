@@ -6,7 +6,7 @@
 }
 
 body {
-    overflow-x: hidden;
+    overflow-x:hidden;
     min-width: 98vw;
     min-height: 98vh;
     background-color: var(--main);
@@ -14,10 +14,10 @@ body {
 }
 
 header {
-    width: 99vw;
+    width: 98vw;
 }
 nav {
-    width: 99vw;
+    width: 98vw;
     background-color: var(--contrast);
     display: flex;
     flex-direction: row;
@@ -67,8 +67,8 @@ input:focus {
 }
 
 section {
-    /* overflow: hidden; */
-    min-width: 99vw;
+    overflow: hidden;
+    min-width: 98vw;
     min-height: 30vh;
     display: flex;
     flex-direction: row;
