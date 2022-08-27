@@ -45,6 +45,7 @@
     border-color: var(--contrast);
     border-radius: 1em;
     margin: 0em 1em;
+    
 }
 
 .move_button:hover {
