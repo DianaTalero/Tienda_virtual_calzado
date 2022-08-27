@@ -1,0 +1,74 @@
+#info_banner,
+#popular,
+#offers {
+    overflow: hidden;
+    max-width: 85vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.offert {
+    transition-property: left;
+    transition-duration: 1000ms;
+    position: relative;
+    min-width: 84.25vw;
+    min-height: 30vh;
+    border-radius: 1em;
+    background-color: var(--second);
+    text-align: center;
+}
+
+.card {
+    transition-property: left;
+    transition-duration: 500ms;
+    position: relative;
+    min-width: 22.5vw;
+    border-radius: 1em;
+    margin: .5em;
+}
+
+.pp {
+    background-color: var(--third);
+}
+
+.off {
+    background-color: var(--main);
+}
+
+.move_button {
+    transition-property: color, background-color, box-shadow;
+    transition-duration: 500ms;
+    height: 30vh;
+    color: var(--main);
+    background-color: var(--bg);
+    border-style: solid;
+    border-color: var(--contrast);
+    border-radius: 1em;
+    margin: 0em 1em;
+}
+
+.move_button:hover {
+    transition-property: color, background-color, box-shadow;
+    transition-duration: 500ms;
+    color: var(--second);
+    background-color: var(--contrast);
+    box-shadow: 0 0 1em var(--contrast) inset,
+                0 0 .5em var(--contrast);
+}
+
+@media (orientation: landscape) {
+    #info_banner,
+    #popular,
+    #offers {
+        min-width: 92vw;
+    }
+    .offert {
+        min-width: 92vw;
+    }
+    .move_button {
+        min-height: 40vh;
+    }
+    .card {
+        min-width: 15vw;
+    }
+}
