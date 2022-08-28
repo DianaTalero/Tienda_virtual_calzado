@@ -1,0 +1,41 @@
+<div class="table-responsive">
+	<table id="productosList"
+		class="table table-bordered table-hover table-striped">
+		<thead class="thead-light">
+			<tr>
+				<th scope="col">Talla</th>
+				<th scope="col">Referencia</th>
+				<th scope="col">Valor Producto</th>
+				<th scope="col">Iva</th>
+				<th scope="col">Valor venta</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="producto: ${productosList}">
+				<td th:text="${producto.talla}"></td>
+				<td th:text="${producto.referencia}"></td>
+				<td th:text="${producto.precioProducto}"></td>
+				<td th:text="${producto.ivaProducto}"></td>
+				<td th:text="${producto.precioVenta}"></td>
+				<td><a href="#" th:href="@{'/editProducto/'+ ${producto.referenica}}"><i
+						class="fas fa-edit"></i></a> | <a href="#"
+					th:onclick="'javascript:confirmDeleteProducto(\''+ ${producto.referencia} +'\');'"><i
+						class="fas fa-user-times"></i></a></td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="alert-danger" th:if="${listErrorMessage}" th:text="${listErrorMessage}">Error Message</div>
+</div>
+<script type="text/javascript">
+function confirmDeleteProducto(id){
+	console.log('id pasado: '+id);
+	$("#deleteModalProducto").modal('show');
+	$("#codigoProductoHiddenInput").val(id);
+}
+
+function deleteProducto(){
+	var id = $("#codigoProductoHiddenInput").val();
+    window.location = "/deleteProducto/"+id;
+}
+</script>

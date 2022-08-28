@@ -1,0 +1,358 @@
+:root {
+	--bg: white;
+    --main: #4D77FF;
+    --second: #56BBF1;
+    --third: #5EE6EB;
+    --contrast: #F2FA5A;
+}
+body {
+    overflow-x:hidden;
+    min-width: 98vw;
+    min-height: 98vh;
+    background-color: var(--bg);
+    margin: 0;
+}
+
+.main-section{
+    margin:0 auto;
+    margin-top:5%;
+}
+.card{
+	opacity: .95;
+}
+.card-body{
+ background-color: #d1d3d6;
+    box-shadow: 0px 0px 3px #d1d3d6;
+}
+
+label{
+	font-weight: bold;
+}
+
+header {
+    width: 100vw;
+}
+
+h1 {
+    width: 70%;
+	color: var(--contrast)
+}
+
+nav {
+    width: 100vw;
+    background-color: var(--second);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+nav > * {
+    margin-left: 1em;
+    margin-right: .5em;
+}
+
+button {
+    color: var(--bg);
+    background-color: transparent;
+    border-style: none;
+    padding: 2em 1em;
+}
+
+button:hover {
+    transition-property: background-color, box-shadow;
+    transition-duration: 500ms;
+    box-shadow: 0 0 1em var(--contrast) inset;
+}
+
+input {
+    height: 1.5em;
+    align-self: center;
+    background-color: var(--bg);
+    border-style: none;
+	border-radius: 1em;
+	padding-left: 1em;
+    margin-left: 1em;
+	margin-right: 1.75em;
+}
+
+input:hover,
+input:focus {
+    outline-style: none;
+    margin-left: .7em;
+}
+
+input:hover,
+input:focus {
+	transition-property: box-shadow, border-style, border-color;
+	transition-duration: 500ms;
+	border-style: solid;
+	border-color: var(--contrast);
+	box-shadow: 0 0 1em 0  var(--contrast);
+}
+
+.site-section {
+  padding: 2rem 0;
+}
+
+section {
+    overflow: hidden;
+    min-width: 98vw;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 1em 0;
+}
+
+footer {
+    color: var(--bg);
+    background-color: var(--second);
+    display: flex;
+    flex-direction: row;
+    margin: 1em 0 0 0;
+}
+
+footer > section {
+	min-height: 5vh;
+    min-width: 30vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    padding: 1em;
+    margin: .5em 0;
+}
+
+footer > section:first-child {
+    display: grid;
+    justify-items: center;
+}
+
+footer > section:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+}
+
+footer > section:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.header_inter {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    max-height: 3em;
+    max-width: 3em;
+}
+
+.direction {
+    width: 16em;
+    position: relative;
+    right: .5em;
+}
+
+.social_media {
+    aspect-ratio: 1/1;
+    width: 3em;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--second);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main);
+    border-style: solid;
+    border-left: var(--contrast);
+    border-top: none;
+    border-bottom: none;
+    border-right: var(--contrast);
+}
+
+.nav-item .nav-link{
+color:#000;
+}
+.compra {
+  border-radius: 5px;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  background: var(--second);
+  border: 1px solid var(--second);
+  padding: 5px 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--contrast);
+  transition: .2s all ease;
+  font-weight: 700;
+}
+
+.compra:active,
+.compra:focus,
+.compra:hover {
+  outline: none;
+}
+
+.compra:hover {
+  color: var(--second);
+  text-decoration: none;
+  border: 1px solid var(--contrast);
+  background: var(--contrast);
+  border-radius: 5px;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.compra1 {
+  border-radius: 5px;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  background: white;
+  border: 1px solid var(--second);
+  padding: 5px 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--second);
+  transition: .2s all ease;
+  font-weight: 700;
+}
+
+.compra1:active,
+.compra1:focus,
+.compra1:hover {
+  outline: none;
+}
+
+.compra1:hover {
+  color: var(--second);
+  border: 1px solid var(--contrast);
+  text-decoration: none;
+  background: var(--contrast);
+  border-radius: 5px;
+    border-top-left-radius: 0.25rem;
+  	border-top-right-radius: 0.25rem;
+  	text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer {
+  padding: 0 0 4rem 0;
+}
+
+.footer a {
+  color: #000;
+}
+
+.social a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  position: relative;
+  text-align: center;
+  color: #0d1e2d;
+    position: relative;
+    right: .5em;
+}
+
+footer {
+    color: var(--bg);
+    background-color: var(--second);
+    display: flex;
+    flex-direction: row;
+    margin: 1em 0 0 0;
+}
+
+footer > section {
+	min-height: 5vh;
+    min-width: 30vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    padding: 1em;
+    margin: .5em 0;
+}
+
+footer > section:first-child {
+    display: grid;
+    justify-items: center;
+}
+
+footer > section:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+}
+
+footer > section:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.header_inter {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    max-height: 3em;
+    max-width: 3em;
+}
+
+.direction {
+    width: 16em;
+    position: relative;
+    right: .5em;
+}
+
+.social_media {
+    aspect-ratio: 1/1;
+    width: 3em;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--second);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main);
+    border-style: solid;
+    border-left: var(--contrast);
+    border-top: none;
+    border-bottom: none;
+    border-right: var(--contrast);
+}
+@media (orientation:landscape) {
+	section {
+		min-height: 40vh;
+	}
+}

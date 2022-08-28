@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+ 			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ 			crossorigin="anonymous"></script>
+	
+	<!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script 
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+		crossorigin="anonymous"></script>
+	
+	<!-- Los iconos tipo Solid de Fontawesome-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+	<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	
+    <title>Productos</title>
+    <link rel="stylesheet" type="text/css" href="static/css/Productos.css" th:href="@{/css/Productos.css}">
+</head>
+<body>  
+
+<div class="Formulario">
+        <form id="productosForm" class="form" role="form" autocomplete="off" th:action="${editMode} ?@{/editProductos}:@{/productosForm}" th:object="${productosForm}" method="post">
+            <div class="Cliente">
+                <label class="col-md-6 col-form-label form-control-label">Número Cédula Cliente</label>
+                <input id="cliente" type="text">
+                <label class="col-md-6 col-form-label form-control-label">Nombre Cliente</label>
+                <input id="cliente" type="text">
+            </div>
+            <div class="Producto">
+                <label class="col-md-6 col-form-label form-control-label" id="codProd">Código Producto</label>
+                <input id="cliente" type="text">
+                <label class="col-md-6 col-form-label form-control-label" id="nomProd">Nombre Producto</label>
+                <input id="cliente" type="text">
+                <label class="col-md-6 col-form-label form-control-label">Número de productos</label>
+                <input id="cliente" type="text">
+                <label class="col-md-6 col-form-label form-control-label">Valor sin Iva</label>
+                <input id="cliente" type="text">
+             </div>
+            <div class="Totales">
+            	<label class="col-md-6 col-form-label form-control-label">Total IVA&nbsp</label>
+                <input id="cliente" type="text">
+                <label class="col-md-6 col-form-label form-control-label">Total Venta</label>
+                <input id="cliente" type="text">
+            </div>
+            <div class="pse">
+            		<a href="https://www.pse.com.co/persona/" target="_blank">
+                        <center><img class = "pse" src="img/BotonPSE.png" width="150" height="150" alt="PSE">
+                    </a>
+            </div>
+        </form>
+    </div>
+  </body>

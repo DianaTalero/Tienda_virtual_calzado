@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+	<meta charset="utf-8">
+	    <title>Productos</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+	<script
+ 		src="https://code.jquery.com/jquery-3.3.1.min.js"
+ 			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ 			crossorigin="anonymous"></script>
+	
+	<!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script 
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	
+	<!-- Los iconos tipo Solid de Fontawesome-->
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+	<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	
+	<!-- Nuestro css-->
+	<link rel="stylesheet" type="text/css" href="static/css/Productos.css"
+		th:href="@{/css/Productos.css}">
+
+	<!-- DATA TABLE -->
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">	
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+	<script type="text/javascript">
+	    $(document).ready(function() {
+	        //Asegurate que el id que le diste a la tabla sea igual al texto despues del simbolo #
+	        $.noConflict();
+	        $('#productosList').DataTable();
+	    } );
+	</script>
+</head>
+<body>
+ <header>
+            <nav>
+                <div class = "brand">
+                    <img class = "logo" src="img//logo.png" alt="logo">
+                    <h1>Brand Name</h1>
+                </div>
+                <div class = "header_inter">
+                    <a href="index.html">
+                        <button>Home</button>
+                    </a>
+                    <button>Shop</button>
+                    <a href="about.html" target="_blank" rel="noopener noreferrer">
+                        <button>About</button>
+                    </a>
+                    <input type="text" name="search_bar_input" id="search_bar_input" placeholder="Search">
+                    <datalist name="search_bar" id="search_bar_main">
+                        <option value="test">
+                        <option value="test 2">
+                    </datalist>
+                </div>
+            </nav>
+        </header>
+        
+    	<div class="site-section pb-0">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-md-6" data-aos="fade-up">
+              <img src="img/tennis_bebe.JPG" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="0">
+              <div class="sticky-content">
+                <h3 class="h3">Tenis Lifestyle Blanco-Negro Tensaur</h3>
+                <p class="mb-4"><span class="text-muted">Adidas Kids</span></p>
+
+                <div class="mb-5">
+                  <p>Estos tenis adidas para niños son perfectos para la aventura. Póntelos antes de ir al colegio y tu peque estará listo para toda actividad, desde correr y otras actividades deportivas hasta divertirse con sus amigos en los momentos de descanso. Su diseño resistente y la resistente suela tipo cupsole de caucho ofrecen sujeción duradera. </p>
+                  <P>Tallas</p>
+					<form>
+					  <select>
+					      <option selected="selected">17</option>
+						  <option>28</option>
+						  <option>30</option>
+						  <option>32</option>
+					  </select>
+					</form>
+                </div>
+                <p><a href="#" class="compra">Añadir al carrito</a><a> </a><a href="#" class="compra1">Compra rapidita</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+	<div class="container">
+		<div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist">
+			<ul class="nav nav-tabs justify-content-center">
+			
+				<li class="nav-item">
+					<a class="nav-link" th:classappend=" ${uploadTab}" id="upload-tab" data-toggle="tab" href="#upload" role="tab" aria-controls="upload" aria-selected="false">Detalle Producto</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " th:classappend=" ${listTab}" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">Productos Similares</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" th:classappend=" ${formTab}" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="false">Pago</a>				   	
+				</li>
+			</ul>
+		<div class="tab-content" id="myTabContent">
+			<div class="tab-pane fade" th:classappend=" ${uploadTab}" id="upload" role="tabpanel" aria-labelledby="form-tab">
+				<div class="card">
+					<div class="card-header">
+						<h4>Detalle de Productos</h4>
+					</div>
+					<div class="card-body">
+						<div th:include="producto-upload.html" th:remove="tag"></div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="tab-pane fade show active" th:classappend=" ${listTab}" id="list" role="tabpanel" aria-labelledby="list-tab">
+				<div class="card">
+					<div class="card-header">
+						<h4>Productos Similares</h4>
+					</div>
+					<div class="card-body">
+						<div th:include="producto-list.html" th:remove="tag"></div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane fade" th:classappend=" ${formTab}" id="form" role="tabpanel" aria-labelledby="form-tab">
+				<div class="card">
+					<div class="card-header">
+						<h4>Pago del producto</h4>
+					</div>
+					<div class="card-body">
+						<div th:include="producto-form.html" th:remove="tag"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ <footer>
+            <section>
+                <article class="brand">
+                    <img class = "logo" src="img/logo.png" alt="logo">
+                    <h1>Brand Name</h1>
+                </article>
+                <article>
+                    <a href="https://twitter.com/unab_online" target="_blank">
+                        <img class = "social_media" src="img/twitter.png" alt="twitter">
+                    </a>
+                    <a href="https://www.facebook.com/unab.online/" target="_blank">
+                        <img class = "social_media" src="img/facebook.png" alt="facebook">
+                    </a>
+                    <a href="https://www.instagram.com/unab_online/" target="_blank">
+                        <img class = "social_media" src="img/instagram.png" alt="instagram">    
+                    </a>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <p>Contact line:  01-8000-127-395</p>
+                    <p>Phone: (57) (7) 643-6111/643-6261</p>
+                    <p>Email: example@email.dev</p>
+                    <p>Common <a href="">Q&A</a></p>
+                </article>
+            </section>
+            <section>
+                Address: Avenida 42 No. 48 – 11, Bucaramanga – Colombia.
+                <a class="direction" target="_blank" href="https://www.google.com/maps/place/Universidad+Aut%C3%B3noma+de+Bucaramanga+-+UNAB/@7.1164673,-73.1076005,17z/data=!4m5!3m4!1s0x8e683fe3d972e479:0xf4d24fabc68b8c!8m2!3d7.1164673!4d-73.1054065">
+                    <img class = "direction" src="img/unab.png" alt="map img">
+                </a>
+            </section>
+        </footer>
+<div th:include="confirm-delete-dialog-producto.html" th:remove="tag"></div>
+</body>
+
+</html>
