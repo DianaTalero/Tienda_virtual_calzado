@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;700;900&display=swap');
+
 :root {
-	--bg: #fff6f6;
+    --bg: #fff6f6;
     --main: #4D77FF;
     --second: #56BBF1;
     --third: #5EE6EB;
@@ -9,11 +11,12 @@
 /* * {outline:solid red} */
 
 body {
-    overflow-x:hidden;
+    overflow-x: hidden;
     min-width: 98vw;
     min-height: 98vh;
     background-color: var(--bg);
     margin: 0;
+    font-family: 'League Spartan', sans-serif;
 }
 
 header {
@@ -22,7 +25,7 @@ header {
 
 h1 {
     width: 70%;
-	color: var(--contrast)
+    color: var(--contrast)
 }
 
 nav {
@@ -31,11 +34,12 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
+    flex-wrap: wrap;
     align-items: center;
 }
 
-nav > * {
+nav>* {
     margin-left: 1em;
     margin-right: .5em;
 }
@@ -58,10 +62,10 @@ input {
     align-self: center;
     background-color: var(--bg);
     border-style: none;
-	border-radius: 1em;
-	padding-left: 1em;
+    border-radius: 1em;
+    padding-left: 1em;
     margin-left: 1em;
-	margin-right: 1.75em;
+    margin-right: 1.75em;
 }
 
 input:hover,
@@ -72,11 +76,11 @@ input:focus {
 
 input:hover,
 input:focus {
-	transition-property: box-shadow, border-style, border-color;
-	transition-duration: 500ms;
-	border-style: solid;
-	border-color: var(--contrast);
-	box-shadow: 0 0 1em 0  var(--contrast);
+    transition-property: box-shadow, border-style, border-color;
+    transition-duration: 500ms;
+    border-style: solid;
+    border-color: var(--contrast);
+    box-shadow: 0 0 1em 0 var(--contrast);
 }
 
 section {
@@ -94,11 +98,13 @@ footer {
     background-color: var(--second);
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    /* Added */
     margin: 1em 0 0 0;
 }
 
-footer > section {
-	min-height: 5vh;
+footer>section {
+    min-height: 5vh;
     min-width: 30vw;
     display: flex;
     flex-direction: column;
@@ -107,17 +113,17 @@ footer > section {
     margin: .5em 0;
 }
 
-footer > section:first-child {
+footer>section:first-child {
     display: grid;
     justify-items: center;
 }
 
-footer > section:nth-child(2) {
+footer>section:nth-child(2) {
     display: flex;
     flex-direction: row;
 }
 
-footer > section:last-child {
+footer>section:last-child {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -128,12 +134,14 @@ footer > section:last-child {
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 1em;
+    gap: 1em;
 }
 
 .header_inter {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    /* Added */
 }
 
 .logo {
@@ -166,7 +174,22 @@ footer > section:last-child {
 }
 
 @media (orientation:landscape) {
-	section {
-		min-height: 40vh;
-	}
+    section {
+        min-height: 40vh;
+    }
+}
+
+@media screen and (max-width: 544px) {
+    nav {
+        justify-content: center;
+    }
+
+    .header_inter {
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .header_inter button {
+        padding: 10px;
+    }
 }

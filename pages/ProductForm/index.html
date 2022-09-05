@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- PicoCSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <!-- Own CSS -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../../styles/productCard.css" />
+    <title>Create Product</title>
+  </head>
+  <body>
+    <wc-toast></wc-toast>
+
+    <header class="container header">
+      <a href="../../index.html" class="header__link">
+        <figure class="header__logo-container logo-container">
+          <img
+            src="../../logo.png"
+            alt="Logo"
+            class="header__logo logo"
+            width="40"
+            height="40"
+          />
+          <figcaption class="logo__name">Brand Name</figcaption>
+        </figure>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Create Product</h1>
+
+      <section class="entry-section">
+        <form class="form">
+          <div class="form__item">
+            <label for="name">Name:</label>
+            <input id="name" name="name" class="form__input" required />
+          </div>
+          <div class="form__item">
+            <label for="description">Description:</label>
+            <textarea
+              name="description"
+              id="description"
+              class="form__input"
+              cols="30"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <div class="form__item">
+            <label for="price">Price:</label>
+            <input
+              type="number"
+              name="price"
+              id="price"
+              class="form__input"
+              min="0"
+              max="9999"
+              value="1"
+            />
+          </div>
+          <div class="form__item">
+            <label for="image">Image URL:</label>
+            <!-- <input type="file" name="image" id="image" required /> -->
+            <input
+              type="url"
+              id="image"
+              name="image"
+              class="form__input"
+              required
+            />
+          </div>
+
+          <button class="btn-create">Create Product</button>
+        </form>
+
+        <article class="product-preview product card">
+          <figure class="product__content">
+            <div class="product__image-container">
+              <img class="product__image" width="180" height="200" />
+            </div>
+
+            <figcaption class="product__details">
+              <h3 class="product__title">Title</h3>
+
+              <p class="product__text">Description</p>
+
+              <div class="product__footer">
+                <p class="product__price">$1 USD</p>
+
+                <button class="product__cta">Add to cart</button>
+              </div>
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <section>
+        <a href="../../index.html">
+          <figure class="logo-container">
+            <img
+              src="../../logo.png"
+              alt="Logo"
+              class="logo"
+              width="60"
+              height="60"
+            />
+            <figcaption class="logo__name">Brand Name</figcaption>
+          </figure>
+        </a>
+
+        <a
+          href="https://twitter.com/unab_online"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/unab.online/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/unab_online/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section>
+        <p>Contact line: 01-8000-127-395</p>
+        <p>Phone: (57) (7) 643-6111/643-6261</p>
+        <p>Email: example@email.dev</p>
+        <p>Common <a href="">Q&A</a></p>
+      </section>
+
+      <section>
+        <p>Address: Avenida 42 No. 48 – 11, Bucaramanga – Colombia.</p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.google.com/maps/place/Universidad+Aut%C3%B3noma+de+Bucaramanga+-+UNAB/@7.1164673,-73.1076005,17z/data=!4m5!3m4!1s0x8e683fe3d972e479:0xf4d24fabc68b8c!8m2!3d7.1164673!4d-73.1054065"
+        >
+          <img
+            class="map-image"
+            src="../../unab.png"
+            alt="map img"
+            width="280"
+            height="160"
+          />
+        </a>
+      </section>
+    </footer>
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

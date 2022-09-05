@@ -45,7 +45,7 @@
     border-color: var(--contrast);
     border-radius: 1em;
     margin: 0em 1em;
-    
+
 }
 
 .move_button:hover {
@@ -54,21 +54,25 @@
     color: var(--second);
     background-color: var(--contrast);
     box-shadow: 0 0 1em var(--contrast) inset,
-                0 0 .5em var(--contrast);
+        0 0 .5em var(--contrast);
 }
 
 @media (orientation: landscape) {
+
     #info_banner,
     #popular,
     #offers {
         min-width: 92vw;
     }
+
     .offert {
         min-width: 92vw;
     }
+
     .move_button {
         min-height: 40vh;
     }
+
     .card {
         min-width: 15vw;
     }

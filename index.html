@@ -1,101 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="style.css">
-        <script src="main.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class = "brand">
-                    <img class = "logo" src="/logo.png" alt="logo">
-                    <h1>Brand Name</h1>
-                </div>
-                <div class = "header_inter">
-                    <a href="index.html">
-                        <button>Home</button>
-                    </a>
-                    <button>Shop</button>
-                    <a href="about.html" target="_blank" rel="noopener noreferrer">
-                        <button>About</button>
-                    </a>
-                    <input type="text" name="search_bar_input" id="search_bar_input" placeholder="Search">
-                    <datalist name="search_bar" id="search_bar_main">
-                        <option value="test">
-                        <option value="test 2">
-                    </datalist>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <section id="scroll_banner">
-                <button class = "move_button" onclick="move('info_banner', 'l')">
-                    <
-                </button>
-                <div id="info_banner">
-                </div>
-                <button class = "move_button" onclick="move('info_banner', 'r')">
-                    >
-                </button>
-            </section>
-            <section id="scroll_pp_products">
-                <button class = "move_button" onclick="move('popular', 'l')">
-                    <
-                </button>
-                <div id="popular">
-                </div>
-                <button class = "move_button" onclick="move('popular', 'r')">
-                    >
-                </button>
-            </section>
-            <section id="scroll_offer_products">
-                <button class = "move_button" onclick="move('offer', 'l')">
-                    <
-                </button>
-                <div id="offers">
-                </div>
-                <button class = "move_button" onclick="move('offer', 'r')">
-                    >
-                </button>
-            </section>
-        </main>
-        <footer>
-            <section>
-                <article class="brand">
-                    <img class = "logo" src="/logo.png" alt="logo">
-                    <h1>Brand Name</h1>
-                </article>
-                <article>
-                    <a href="https://twitter.com/unab_online" target="_blank">
-                        <img class = "social_media" src="/twitter.png" alt="twitter">
-                    </a>
-                    <a href="https://www.facebook.com/unab.online/" target="_blank">
-                        <img class = "social_media" src="/facebook.png" alt="facebook">
-                    </a>
-                    <a href="https://www.instagram.com/unab_online/" target="_blank">
-                        <img class = "social_media" src="/instagram.png" alt="instagram">    
-                    </a>
-                </article>
-            </section>
-            <section>
-                <article>
-                    <p>Contact line:  01-8000-127-395</p>
-                    <p>Phone: (57) (7) 643-6111/643-6261</p>
-                    <p>Email: example@email.dev</p>
-                    <p>Common <a href="">Q&A</a></p>
-                </article>
-            </section>
-            <section>
-                Address: Avenida 42 No. 48 – 11, Bucaramanga – Colombia.
-                <a class="direction" target="_blank" href="https://www.google.com/maps/place/Universidad+Aut%C3%B3noma+de+Bucaramanga+-+UNAB/@7.1164673,-73.1076005,17z/data=!4m5!3m4!1s0x8e683fe3d972e479:0xf4d24fabc68b8c!8m2!3d7.1164673!4d-73.1054065">
-                    <img class = "direction" src="/unab.png" alt="map img">
-                </a>
-            </section>
-        </footer>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/productCard.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="brand">
+          <img class="logo" src="/logo.png" alt="logo" />
+          <h1>Brand Name</h1>
+        </div>
+        <div class="header_inter">
+          <a href="index.html">
+            <button>Home</button>
+          </a>
+          <button>Shop</button>
+          <a href="about.html" target="_blank" rel="noopener noreferrer">
+            <button>About</button>
+          </a>
+          <a href="./pages/ProductForm/index.html">
+            <button>Create Product</button>
+          </a>
+          <input
+            type="text"
+            name="search_bar_input"
+            id="search_bar_input"
+            placeholder="Search"
+          />
+          <datalist name="search_bar" id="search_bar_main">
+            <option value="test"></option>
+            <option value="test 2"></option>
+          </datalist>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="scroll_banner">
+        <button class="move_button" onclick="move('info_banner', 'l')">
+          &lt;
+        </button>
+        <div id="info_banner"></div>
+        <button class="move_button" onclick="move('info_banner', 'r')">
+          &gt;
+        </button>
+      </section>
+      <section id="scroll_pp_products">
+        <button class="move_button" onclick="move('popular', 'l')">&lt;</button>
+        <div id="popular"></div>
+        <button class="move_button" onclick="move('popular', 'r')">&gt;</button>
+      </section>
+      <section id="scroll_offer_products">
+        <button class="move_button" onclick="move('offer', 'l')">&lt;</button>
+        <div id="offers"></div>
+        <button class="move_button" onclick="move('offer', 'r')">&gt;</button>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <article class="brand">
+          <img class="logo" src="/logo.png" alt="logo" />
+          <h1>Brand Name</h1>
+        </article>
+        <article>
+          <a href="https://twitter.com/unab_online" target="_blank">
+            <img class="social_media" src="/twitter.png" alt="twitter" />
+          </a>
+          <a href="https://www.facebook.com/unab.online/" target="_blank">
+            <img class="social_media" src="/facebook.png" alt="facebook" />
+          </a>
+          <a href="https://www.instagram.com/unab_online/" target="_blank">
+            <img class="social_media" src="/instagram.png" alt="instagram" />
+          </a>
+        </article>
+      </section>
+      <section>
+        <article>
+          <p>Contact line: 01-8000-127-395</p>
+          <p>Phone: (57) (7) 643-6111/643-6261</p>
+          <p>Email: example@email.dev</p>
+          <p>Common <a href="">Q&A</a></p>
+        </article>
+      </section>
+      <section>
+        Address: Avenida 42 No. 48 – 11, Bucaramanga – Colombia.
+        <a
+          class="direction"
+          target="_blank"
+          href="https://www.google.com/maps/place/Universidad+Aut%C3%B3noma+de+Bucaramanga+-+UNAB/@7.1164673,-73.1076005,17z/data=!4m5!3m4!1s0x8e683fe3d972e479:0xf4d24fabc68b8c!8m2!3d7.1164673!4d-73.1054065"
+        >
+          <img class="direction" src="/unab.png" alt="map img" />
+        </a>
+      </section>
+    </footer>
+
+    <script src="./src/index.js" type="module"></script>
+  </body>
 </html>
