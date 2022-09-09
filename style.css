@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;700;900&display=swap');
 
+/*
+    Changes 8-sep:
+    - Corrected a little size error in the footer
+    - Removed trash code lines from tests
+    - Uncomment the line below :root to see the structure
+*/
+
 :root {
     --bg: #fff6f6;
     --main: #4D77FF;
@@ -90,6 +97,7 @@ section {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: center;
     margin: 1em 0;
 }
 
@@ -99,18 +107,16 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* Added */
     margin: 1em 0 0 0;
 }
 
 footer>section {
     min-height: 5vh;
-    min-width: 30vw;
+    min-width: 29vw;
     display: flex;
     flex-direction: column;
     row-gap: 1em;
     padding: 1em;
-    margin: .5em 0;
 }
 
 footer>section:first-child {
@@ -141,7 +147,6 @@ footer>section:last-child {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* Added */
 }
 
 .logo {
@@ -166,11 +171,6 @@ footer>section:last-child {
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--main);
-    border-style: solid;
-    border-left: var(--contrast);
-    border-top: none;
-    border-bottom: none;
-    border-right: var(--contrast);
 }
 
 @media (orientation:landscape) {
@@ -180,7 +180,7 @@ footer>section:last-child {
 }
 
 @media screen and (max-width: 544px) {
-    nav {
+    nav, footer {
         justify-content: center;
     }
 

@@ -1,14 +1,20 @@
 <!DOCTYPE html>
+<!--
+  Changes 8-sep:
+  - Erased empty cards
+  - Removed Buttons to implement only the scrollpane made by Eudes
+    in the example cards
+  - Removed unnecesary Buttons in header
+-->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Shoes Shop</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./styles/productCard.css" />
-    <script src="./main.js" defer></script>
   </head>
   <body>
     <header>
@@ -21,12 +27,11 @@
           <a href="index.html">
             <button>Home</button>
           </a>
-          <button>Shop</button>
-          <a href="about.html" target="_blank" rel="noopener noreferrer">
-            <button>About</button>
+          <a href="shop.html">
+            <button>Shop</button>
           </a>
           <a href="./pages/ProductForm/index.html">
-            <button>Create Product</button>
+            <button>Create</button>
           </a>
           <input
             type="text"
@@ -34,32 +39,18 @@
             id="search_bar_input"
             placeholder="Search"
           />
-          <datalist name="search_bar" id="search_bar_main">
-            <option value="test"></option>
-            <option value="test 2"></option>
-          </datalist>
         </div>
       </nav>
     </header>
     <main>
       <section id="scroll_banner">
-        <button class="move_button" onclick="move('info_banner', 'l')">
-          &lt;
-        </button>
         <div id="info_banner"></div>
-        <button class="move_button" onclick="move('info_banner', 'r')">
-          &gt;
-        </button>
       </section>
       <section id="scroll_pp_products">
-        <button class="move_button" onclick="move('popular', 'l')">&lt;</button>
         <div id="popular"></div>
-        <button class="move_button" onclick="move('popular', 'r')">&gt;</button>
       </section>
       <section id="scroll_offer_products">
-        <button class="move_button" onclick="move('offer', 'l')">&lt;</button>
         <div id="offers"></div>
-        <button class="move_button" onclick="move('offer', 'r')">&gt;</button>
       </section>
     </main>
     <footer>
@@ -85,11 +76,12 @@
           <p>Contact line: 01-8000-127-395</p>
           <p>Phone: (57) (7) 643-6111/643-6261</p>
           <p>Email: example@email.dev</p>
-          <p>Common <a href="">Q&A</a></p>
         </article>
       </section>
       <section>
-        Address: Avenida 42 No. 48 – 11, Bucaramanga – Colombia.
+        Address: Avenida 42 No. 48 – 11,
+        <br>
+        Bucaramanga – Colombia.
         <a
           class="direction"
           target="_blank"

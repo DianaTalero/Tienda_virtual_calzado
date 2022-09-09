@@ -1,0 +1,56 @@
+main {
+	display: grid;
+	place-items: center;
+}
+
+main > section:first-child {
+	outline: solid red;
+	min-width: 80vw;
+	min-height: 12vh;
+}
+
+#filters {
+	max-width: 80vw;
+	max-height: 12vh;
+	color: var(--second);
+	background-color: var(--contrast);
+	border-radius: 1em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	row-gap: 1em;
+}
+
+#filters > div {
+	margin: 0 2em;
+}
+
+select {
+	color: var(--main);
+	background-color: var(--bg);
+	border-style: none;
+	padding: .5em;
+	border-radius: 1em;
+}
+
+select:hover, select:focus {
+	outline-style: none;
+}
+
+#products {
+	min-width: 90vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	row-gap: 1em;
+	column-gap: 1em;
+}
+
+@media (orientation: landscape) {
+	main > section:first-child,
+	#filters {
+		max-width: 50vw;
+		max-height: 6vh;
+	}
+}

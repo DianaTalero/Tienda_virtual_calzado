@@ -35,28 +35,6 @@
     background-color: var(--main);
 }
 
-.move_button {
-    transition-property: color, background-color, box-shadow;
-    transition-duration: 500ms;
-    height: 30vh;
-    color: var(--main);
-    background-color: var(--bg);
-    border-style: solid;
-    border-color: var(--contrast);
-    border-radius: 1em;
-    margin: 0em 1em;
-
-}
-
-.move_button:hover {
-    transition-property: color, background-color, box-shadow;
-    transition-duration: 500ms;
-    color: var(--second);
-    background-color: var(--contrast);
-    box-shadow: 0 0 1em var(--contrast) inset,
-        0 0 .5em var(--contrast);
-}
-
 @media (orientation: landscape) {
 
     #info_banner,
