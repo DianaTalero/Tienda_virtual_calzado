@@ -30,9 +30,7 @@ const previewText = ({ element, text }) => {
 const getFormData = () => {
   const elements = document.querySelectorAll(".form__input");
 
-  const id = window.crypto.randomUUID();
-
-  const formData = { id };
+  const formData = {};
 
   elements.forEach(({ name, value }) => {
     formData[name] = value;

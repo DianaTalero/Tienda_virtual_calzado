@@ -3,27 +3,30 @@ main {
 	place-items: center;
 }
 
-main > section:first-child {
+main>section:first-child {
 	outline: solid red;
 	min-width: 80vw;
 	min-height: 12vh;
+	display: grid;
+	place-items: center;
 }
 
 #filters {
 	max-width: 80vw;
 	max-height: 12vh;
+	height: 100%;
 	color: var(--second);
 	background-color: var(--contrast);
 	border-radius: 1em;
 	display: flex;
-	flex-direction: row;
+	align-items: center;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	row-gap: 1em;
 }
 
-#filters > div {
-	margin: 0 2em;
+#filters>div {
+	margin: 0 auto;
 }
 
 select {
@@ -34,7 +37,8 @@ select {
 	border-radius: 1em;
 }
 
-select:hover, select:focus {
+select:hover,
+select:focus {
 	outline-style: none;
 }
 
@@ -43,12 +47,13 @@ select:hover, select:focus {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	row-gap: 1em;
-	column-gap: 1em;
+	gap: 1em;
+	padding: 1em 2em;
 }
 
 @media (orientation: landscape) {
-	main > section:first-child,
+
+	main>section:first-child,
 	#filters {
 		max-width: 50vw;
 		max-height: 6vh;

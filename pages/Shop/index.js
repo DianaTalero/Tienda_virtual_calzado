@@ -1,8 +1,8 @@
-import { getProducts } from "../services/getProducts.js";
-import { createProductCard } from "./components/ProductCard.js";
+import { getProducts } from "../../services/getProducts.js";
+import { createProductCard } from "../../src/components/ProductCard.js";
 
 const renderProducts = (products) => {
-  const productsList = document.querySelector("#offers");
+  const productsList = document.querySelector("#products");
   const html = products.map(createProductCard).join("");
   productsList.innerHTML = html;
 };

@@ -1,20 +1,13 @@
 <!DOCTYPE html>
-<!--
-  Changes 8-sep:
-  - Erased empty cards
-  - Removed Buttons to implement only the scrollpane made by Eudes
-    in the example cards
-  - Removed unnecesary Buttons in header
--->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shoes Shop</title>
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./styles/productCard.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="./shop.css" />
+    <link rel="stylesheet" href="../../styles/productCard.css" />
   </head>
   <body>
     <header>
@@ -24,13 +17,13 @@
           <h1>Brand Name</h1>
         </div>
         <div class="header_inter">
-          <a href="./index.html">
+          <a href="../../index.html">
             <button>Home</button>
           </a>
-          <a href="./pages/Shop/shop.html">
+          <a href="./shop.html">
             <button>Shop</button>
           </a>
-          <a href="./pages/ProductForm/index.html">
+          <a href="../ProductForm/index.html">
             <button>Create</button>
           </a>
           <input
@@ -43,15 +36,39 @@
       </nav>
     </header>
     <main>
-      <section id="scroll_banner">
-        <div id="info_banner"></div>
+      <section class="filters-section">
+        <nav id="filters">
+          <div>
+            <label for="#colors">Colors: </label>
+            <select name="colors" id="colors">
+              <option value="any">Any</option>
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="White">White</option>
+              <option value="Black">Black</option>
+              <option value="Grey">Grey</option>
+            </select>
+          </div>
+          <div>
+            <label for="#model">Model:</label>
+            <select name="models" id="model">
+              <option value="any">Any</option>
+              <option value="sports">Sports</option>
+              <option value="boots">Boots</option>
+              <option value="urban">Urban</option>
+              <option value="heels">Heels</option>
+              <option value="formal">Formal</option>
+            </select>
+          </div>
+          <div>
+            <label for="#size">Size:</label>
+            <select name="sizes" id="size">
+              <option value="any">Any</option>
+            </select>
+          </div>
+        </nav>
       </section>
-      <section id="scroll_pp_products">
-        <div id="popular"></div>
-      </section>
-      <section id="scroll_offer_products">
-        <div id="offers"></div>
-      </section>
+      <section id="products"></section>
     </main>
     <footer>
       <section>
@@ -91,7 +108,18 @@
         </a>
       </section>
     </footer>
+    <script>
+      const sizes = document.getElementsByName("sizes")[0];
 
-    <script src="./src/index.js" type="module"></script>
+      for (let index = 0; index < 11; ++index) {
+        const min_size = 35,
+          option = document.createElement("option"),
+          value = `${index + min_size}`;
+        option.value = value;
+        option.innerText = value;
+        sizes.appendChild(option);
+      }
+    </script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
