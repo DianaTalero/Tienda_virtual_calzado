@@ -4,7 +4,6 @@ main {
 }
 
 main>section:first-child {
-	outline: solid red;
 	min-width: 80vw;
 	min-height: 12vh;
 	display: grid;
